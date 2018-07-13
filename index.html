@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width" />
+<meta name="keywords" content="becgymkhana,becfusion"/>
+<meta name="author" content="Wangsun Hakhun/Jairam" />
+<title>Gymkhana website</title>
+
+<link rel="stylesheet" href="./css/common.css">
+
+<style media="screen">
+
+#showcase{
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+#showcase h1{
+  font-size:70px;
+  font-family:sans-serif;
+  font-weight:bolder;
+  padding-bottom:0px;
+  margin-bottom:0px;
+  color:#FFB300;
+  padding-top:0px;
+  margin-top:0px;
+}
+
+#showcase h5{
+  padding-top:0px;
+   margin:0px;
+   float:right;
+   font-size:20px;
+   padding-right:5%;
+   color:white
+}
+
+#showcase h3{
+  color: white;
+  font-size:50px;
+  font-family:'Fancy Pants NF';
+  font-weight:bolder;
+  padding-bottom:0px;
+  margin-bottom:0px;
+  margin-top:50px;
+}
+
+#showcase h4{
+  font-size:40px;
+  font-family:'Bradley Hand ITC';
+  font-weight:bolder;
+  padding-bottom:0px;
+  margin-bottom:0px;
+  margin-top:10px;
+  color:white
+}
+
+/* Newsletter */
+#newsletter{
+	color:#FFFFFF;
+	margin-bottom:20px;
+	padding-top:0px;
+	border-top:#E65100 2px solid;
+	border-bottom:#E65100 3px solid;
+	background:#263238;
+}
+
+#newsletter h1{
+	float:left;
+}
+
+#newsletter .input{
+	float:right;
+	margin-top:20px;
+}
+
+#newsletter input[type="email"]{
+	padding:4px;
+	height:20px;
+	width:250px;
+}
+
+
+/* Media Queries */
+@media(max-width: 600px){
+  #showcase h1{
+    font-size: 50px;
+  }
+
+  #showcase h5{
+    font-size: 15px;
+  }
+
+  #showcase h3{
+    font-size: 25px;
+  }
+
+  #showcase h4{
+    font-size: 20px;
+  }
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<!-- <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-database.js"></script>
+  // Initialize Firebase
+<script src="./js/firebase.js"></script> -->
+
+  <header>
+    <div class="container">
+      <img src="./img/logo2.png" width="140px" height="140px" id="id_logo"/>
+
+      <div class="heading">
+        <h3>BASAVESHWAR ENGINEERING COLLEGE (AUTONOMOUS), BAGALKOT-587103</h3>
+        <h3>(Government Aided Institute, Approved by AICTE, NAAC with A grade and Affiliated to)</h3>
+        <h3>Visvesvaraya Technological University, Belgaum)</h3>
+      </div>
+    </div>
+
+    <div class="container">
+      <nav>
+        <ul align="center">
+            <li class="current"> <a href="index.html">Home</a>  </li>
+            <li> <a href="event.html">Events</a>  </li>
+            <li> <a href="schedule.html">Schedule</a>  </li>
+            <li> <a href="registration.html">Registration</a>  </li>
+            <li> <a href="gallery.html">Gallery</a>  </li>
+            <li> <a href="hospitality.html">Hospitality</a>  </li>
+            <li> <a href="contact.html">Contact us</a>  </li>
+         </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="showcase">
+      <div class="container">
+          <h1>FUSION-2K18</h1>
+          <h5>Divided by colleges, united by fest</h5>
+          <h3>National Level Tech Fest</h3>
+          <h4>10<sup>th</sup> & 11<sup>th</sup> March, 2018</h4>
+      </div>
+  </section>
+
+  <section id="newsletter">
+    <div class="container">
+        <h1> Subscribe to Gymkhana Bagalkot </h1>
+
+        <div class="input">
+          <input type="email" placeholder="Enter email..." id="id_email">
+          <button type="submit" class="button" onclick="subscribe()">Subscribe</button>
+        </div>
+      </div>
+  </section>
+
+  <footer>
+    <p> Gymkhana BEC, copyright &copy; 2018. All copyrights reserved. <br/>
+    Designed and developed by<span style=" font-style:italic"> Wangsun Hakhun </span>and <span style=" font-style:italic">Jayaram Kulkarni</span><br/>
+    Email: help@becsupport.com</p>
+  </footer>
+
+  <script>
+    
+    function subscribe() {
+
+    el_email=document.getElementById("id_email");
+
+    //check if email in valid or not
+    var string = el_email.value,substring = "@",substring2=".com";
+    if(!string.includes(substring && substring2)){
+      alert("Invalid email...");
+      return;
+    }
+
+    var database = firebase.database();
+
+    firebase.database().ref('fusion_subscribers').push().set({
+      email: el_email.value
+    });
+    alert("Thanks for subscribing...");
+    el_email.value="";
+    }
+  </script>
+
+</body>
+</html>

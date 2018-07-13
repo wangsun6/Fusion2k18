@@ -1,0 +1,286 @@
+body{
+  background-color: red;
+  padding:0;
+  margin:0;
+  background:url('../img/bg2.jpg') repeat 0 190px;
+}
+
+.container{
+  text-align: center;
+  width:80%;
+  margin:auto;
+  overflow:hidden;
+}
+
+.button{
+  height:30px;
+	background-color:#0D47A1;
+	padding-left:20px;
+	padding-right:20px;
+	border:none;
+	color:#FFFFFF;
+}
+
+#id_logo{
+  float: left;
+}
+
+/*heading*/
+header{
+  color:#ffffff;
+  padding-top:30px;
+  min-height:200px;
+  text-align: center;
+  background-color:#212121;
+}
+
+header .heading{
+  border-bottom:#e8491d 3px solid;
+  padding-bottom: 20px;
+}
+
+header .heading h3{
+  color:white;
+}
+
+
+/*navigation*/
+header nav{
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-bottom:#e8491d 3px solid;
+  margin-bottom: 10px;
+}
+
+header li{
+  display:inline;
+  padding: 0 20px 0 20px;
+}
+
+header a{
+  color:#FFFFFF;
+  text-decoration: none;
+	text-transform:uppercase;
+}
+header .current a{
+  color:#AEEA00;
+  font-weight:bold;
+}
+
+header a:hover{
+  color:#cccccc;
+  font-weight:bold;
+}
+
+/*footer*/
+footer{
+  text-align: center;
+  background-color: #212121;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+footer p{
+  color: white;
+  padding: 0;
+  margin: 0;
+}
+
+/* commmon sets*/
+.section_set{
+  margin-bottom: 50px;
+
+}
+
+.section_set h1{
+  color: white;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  font-size:35px;
+  font-family:'Bradley Hand ITC';
+  font-weight:1000;
+  text-decoration: underline;
+}
+
+.section_set th{
+  color: white;
+  font-size: 25px;
+  padding: 10px;
+  text-align: left;
+
+}
+
+
+/*table*/
+.section_table table{
+  background-color:#333333;
+	border:dotted;
+	border-color:#00FF00;
+	margin-bottom:20px;
+}
+
+.section_table th{
+  text-align: left;
+	border:dotted;
+  padding: 10px;
+	border-width:thin;
+	border-color:#00FF00;
+  color: #FFC107;
+}
+
+.section_table td{
+  text-align:center;
+  	padding:10px;
+  	border:dotted;
+  	border-width:thin;
+  	border-color:#00FF00;
+    color: #FFC107;
+}
+
+/* event info section */
+#event_info{
+  margin-bottom: 20px;
+
+}
+.back{
+  float:left;
+}
+
+.event_showcase{
+  width: 80%;
+  color:#FFCC33;
+	margin:auto;
+	margin-top:20px;
+	padding-left:25px;
+	padding-right:25px;
+	overflow:hidden;
+	background:#333333;
+	border:#00FF00 2px dotted;
+}
+.event_showcase h1{
+  font-size:30px;
+  padding-top:0;
+  padding-bottom:0;
+}
+.event_showcase h3{
+  color:#FF9900;
+  font-family:'Ruffle Script DEMO';
+  font-size:22px;
+  border-bottom:#00FF00 2px solid;
+}
+.event_showcase h4{
+   font-size:22px;
+   font-family:'sans-serif';
+   text-decoration:underline;
+}
+.event_showcase p{
+  font-size:20px;
+   font-family:'sans-serif';
+}
+.event_showcase li{
+  font-size:20px;
+  font-family:'sans-serif';
+}
+
+#c_info{
+  margin: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border:#00FF00 2px dashed;
+  color:#FFCC33;
+  float: none;
+  width: 60%;
+  background-color:#333333;
+}
+
+
+.contact h4{
+  font-size:20px;
+  color:#FF9900;
+  padding: 10px;
+  margin: 0px;
+}
+.contact h5{
+  text-align:center;
+	margin:auto;
+	font-size:20px;
+}
+
+/* Media Queries */
+@media(max-width: 600px){
+  header nav,
+  #newsletter h1,
+  #newsletter .input{
+    float:none;
+    text-align:center;
+    width:100%;
+  }
+  header nav li{
+    display: block;
+    padding: 10px;
+  }
+
+  #id_logo{
+    float: none;
+  }
+
+  header{
+    padding-bottom:20px;
+  }
+
+  #showcase h1{
+    margin-top:40px;
+  }
+
+  #newsletter button{
+    display:block;
+    width:100%;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+
+  #newsletter .input input[type="email"], .quote input, .quote textarea{
+    width:100%;
+  }
+
+  /*sets common*/
+  .section_set h1{
+    font-size: 22px;
+  }
+  .section_set th{
+    font-size: 20px;
+  }
+  .section_set img{
+    width: 70px;
+    height: 70px;
+  }
+
+
+  /*event*/
+  .event_showcase h1{
+    font-size: 22px;
+  }
+  .event_showcase p,.event_showcase li{
+    font-size: 18px;
+  }
+
+  .event_showcase h3,.event_showcase h4{
+    font-size: 20px;
+  }
+  .event_showcase img{
+    width: 180px;
+    height: 150px;
+  }
+  .event_showcase a>img{
+    width:40px;
+    height: 24px;
+  }
+
+  #c_info{
+    width: 80%;
+  }
+  .contact h4, .contact h5{
+    font-size: 16px;
+    }
+}

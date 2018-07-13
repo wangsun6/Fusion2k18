@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width" />
+<meta name="keywords" content="becgymkhana,becfusion,registration"/>
+<title>Gymkhana website</title>
+
+<link rel="stylesheet" href="./css/common.css">
+<script type="text/javascript" src="./js/reg.js">
+
+</script>
+
+<style media="screen">
+
+.section_table{
+  margin-bottom: 50px;
+}
+
+.section_table h3{
+  color: white;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  font-size:35px;
+  font-family:'Bradley Hand ITC';
+  font-weight:1000;
+  text-decoration: underline;
+}
+
+
+#info{
+	border:#33CC00 2px solid;
+	color:#FF9900;
+	font-size:20px;
+	font-family:"Times New Roman", Times, serif;
+	text-align:center;
+	background:#333333;
+	margin-bottom:20px;
+}
+#logout{
+  float: left;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+#login{
+  float: right;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+
+/*loading animation*/
+#id_loader{
+border: 16px solid #f3f3f3;
+border-radius: 50%;
+border-top: 16px solid #3498db;
+width: 80px;
+height: 80px;
+-webkit-animation: spin 2s linear infinite; /* Safari */
+animation: spin 2s linear infinite;
+
+position: absolute;
+top: 30%;
+left: 45%;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+0% { -webkit-transform: rotate(0deg); }
+100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+
+
+
+/* Media Queries */
+@media(max-width: 600px){
+
+  /*table*/
+  .section_table th{
+    display: block;
+    color: white;
+    padding: 10px;
+    text-align: left;
+  }
+
+  .section_table h2{
+    font-size: 20px;
+  }
+}
+
+</style>
+
+</head>
+
+
+<body>
+  <!-- <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-firestore.js"></script>
+    <script src="./js/firebase.js"></script> -->
+
+    <!--<script type="text/javascript">
+        initApp = function() {
+          firebase.auth().onAuthStateChanged(function(user) {
+            if (user) {
+              // User is signed in.
+              var displayName = user.displayName;
+              var email = user.email;
+              /*var emailVerified = user.emailVerified;
+              var photoURL = user.photoURL;
+              var uid = user.uid;
+              var phoneNumber = user.phoneNumber;
+              var providerData = user.providerData;8*/
+              user.getIdToken().then(function(accessToken) {
+                var a = JSON.stringify({
+                  displayName: displayName,
+                  email: email
+                  /*emailVerified: emailVerified,
+                  phoneNumber: phoneNumber,
+                  photoURL: photoURL,
+                  uid: uid,
+                  accessToken: accessToken,
+                  providerData: providerData*/
+                }, null, '  ');
+              });
+            } else {
+              // User is signed out.
+              window.location.href = "login.html";
+              /*document.getElementById('sign-in-status').textContent = 'Signed out';
+              document.getElementById('sign-in').textContent = 'Sign in';
+              document.getElementById('account-details').textContent = 'null';*/
+            }
+          }, function(error) {
+            console.log(error);
+          });
+        };
+
+        window.addEventListener('load', function() {
+          initApp()
+        });
+      </script>-->
+
+
+  <header>
+    <div class="container">
+      <img src="./img/logo2.png" width="140px" height="140px" id="id_logo"/>
+
+      <div class="heading">
+        <h3>BASAVESHWAR ENGINEERING COLLEGE (AUTONOMOUS), BAGALKOT-587103</h3>
+        <h3>(Government Aided Institute, Approved by AICTE, NAAC with A grade and Affiliated to)</h3>
+        <h3>Visvesvaraya Technological University, Belgaum)</h3>
+      </div>
+    </div>
+
+    <div class="container">
+      <nav>
+        <ul align="center">
+            <li> <a href="index.html">Home</a>  </li>
+            <li> <a href="event.html">Events</a>  </li>
+            <li> <a href="schedule.html">Schedule</a>  </li>
+            <li class="current"> <a href="registration.html">Registration</a>  </li>
+            <li> <a href="gallery.html">Gallery</a>  </li>
+            <li> <a href="hospitality.html">Hospitality</a>  </li>
+            <li> <a href="contact.html">Contact us</a>  </li>
+         </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="login_section">
+    <div class="container">
+      <div id="logout" style="float:left">
+       <button type="button" class="button" onClick="logout()">Log Out</button>
+     </div>
+
+     <div id="login"  style="float:right">
+       <input type="password" placeholder="Enter Password" id="id_pwd"/><br/>
+       <button type="button" class="button" onClick="login()">Admin</button>
+     </div>
+    </div>
+ </section>
+
+
+
+  <section class="section_table">
+
+    <div class="container">
+
+      <h3>Registration Form</h3>
+      <h2 style="color:#F8BBD0">Events are closed</h2>
+
+      <table border="1" cellpadding="5" align="center" id="id_table">
+          <tr>
+            <th>Name:</th>
+            <th><input type="text" placeholder="Enter your name" id="id_name"/></th>
+          </tr>
+
+          <tr>
+            <th>Gender:</th>
+            <th>
+              <input type="checkbox" id="id_gender_m" onchange="check_gender(0)"/>
+              Male
+              <input type="checkbox" id="id_gender_f" onchange="check_gender(1)"/>
+              Female
+            </th>
+          </tr>
+
+          <tr>
+            <th>College Name:</th>
+            <th>
+              <input type="text" placeholder="Enter your college name" id="id_college"/>
+              <!--<table>
+                <tr><!--<input type="text" placeholder="Enter your college name" id="id_college"/>
+                  <th>
+                    <select id="id_college" onchange="check_college()">
+                      <option value="0">Select:</option>
+                      <option value="1">Basaveshwar Engg. College</option>
+                      <option value="2">Other</option>
+                    </select>
+                  </th>
+                  <th style="display:none" id="id_toggle_college"><input type="text" placeholder="Enter your college name" id="id_college_value"/></th>
+                </tr>
+              </table>-->
+            </th>
+          </tr>
+
+          <tr>
+            <th>Branch:</th>
+            <th>
+              <select id="id_branch">
+                <option value="0">Select Dept.:</option>
+                <option value="au">Automobile</option>
+                <option value="bt">Biotechnology</option>
+                <option value="cs">Computer Science & Engg</option>
+                <option value="cv">Civil Engg</option>
+                <option value="ec">Electronics & Communication Engg</option>
+                <option value="ee">Electrical & Electronics Eng</option>
+                <option value="ei">Electronics & Instrumentation Engg</option>
+                <option value="ip">Industrial & Production Engg</option>
+                <option value="is">Information Science and Engg</option>
+                <option value="me">Mechanical Engg</option>
+                <option value="other">Other</option>
+              </select>
+            </th>
+          </tr>
+
+          <tr>
+            <th>City:</th>
+            <th><input type="text" placeholder="Enter city" id="id_city"/></th>
+          </tr>
+
+          <tr>
+            <th>Semester:</th>
+            <th>
+              <select id="id_sem">
+                <option value="0">Select Semester:</option>
+                <option value="2">2</option>
+                <option value="4">4</option>
+                <option value="6">6</option>
+                <option value="8">8</option>
+              </select>
+            </th>
+          </tr>
+
+          <tr>
+            <th>Mobile No.:</th>
+            <th><input type="number" placeholder="Enter mobile number" id="id_phone"/></th>
+          </tr>
+
+          <tr>
+            <th>Email:</th>
+            <th><input type="text" placeholder="Enter email id" id="id_email"/></th>
+          </tr>
+
+          <tr>
+            <th>Event:</th>
+            <th>
+              <table border="1" align="center">
+                <tr>
+                  <th>Set-1</th>
+                  <th>
+                    <select id="id_set1">
+                      <option value="0">Select:</option>
+                      <option value="1">Paper Presentation</option>
+                      <option value="2">Survey Quest</option>
+                      <option value="3">DNAwesome</option>
+                      <option value="4">Minute to Win</option>
+                      <option value="5">Suljan</option>
+                    </select>
+                  </th>
+                </tr>
+                <tr>
+                  <th>Set-2</th>
+                  <th>
+                    <select id="id_set2">
+                      <option value="0">Select:</option>
+                      <option value="1">Project Exhibition</option>
+                      <option value="2">Circuit Design & Debugging</option>
+                      <option value="3">Technowrapper</option>
+                      <option value="4">Bridge Battle</option>
+                      <option value="5">Technosearch</option>
+                      <option value="6">Add Mad Show</option>
+                      <option value="7">Roadies</option>
+                    </select>
+                  </th>
+                </tr>
+                <tr>
+                  <th>Set-3</th>
+                  <th>
+                    <select id="id_set3">
+                      <option value="0">Select:</option>
+                      <option value="1">Technical Treasure Hunt</option>
+                      <option value="2">Speak for India</option>
+                      <option value="3">Dropout</option>
+                      <option value="4">Clay Modelling</option>
+                      <option value="5">Short Movie</option>
+                      <option value="6">TRI-VIDHA</option>
+                    </select>
+                  </th>
+                </tr>
+              </table>
+
+              <span style="color:#F44336">You can select max. one event from each set.</span>
+          </tr>
+
+          <tr>
+            <th>Accomodation Required ?</th>
+            <th><input type="checkbox" id="id_accomodation"/></th>
+          </tr>
+
+          <tr>
+            <th colspan="2" style="text-align:center"><button type="button" class="button" onclick="event_closed()">SUBMIT</button></th>
+          </tr>
+        </table>
+    </div>
+  </section>
+
+  <section id="info">
+       <div>
+           <h3>OUT HOUSE:</h3>
+           <p>For two events Rs 300/ participant one from each SET.<br/>
+           For three events Rs 350/ participant one from each SET.
+           </p>
+           <h3>IN HOUSE:</h3>
+           <p>For two events Rs 100/ participant one from each SET.<br/>
+           For three events Rs 150/ participant one from each SET.</p>
+           <h3 style="color:green">Mode of payment: On the day of event.</h3>
+       </div>
+   </section>
+
+   <div id="id_loader" style="visibility:hidden"></div>
+
+  <footer>
+    <p> Gymkhana BEC, copyright &copy; 2018. All copyrights reserved. <br/>
+    Designed and developed by<span style=" font-style:italic"> Wangsun Hakhun </span>and <span style=" font-style:italic">Jayaram Kulkarni</span><br/>
+    Email: help@becsupport.com</p>
+  </footer>
+
+
+</body>
+</html>

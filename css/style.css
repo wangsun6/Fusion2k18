@@ -1,0 +1,502 @@
+/* All the tag style is serial wise vertically according to the web page  */
+
+/* Body of the Web page */
+body{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:15px;
+	/*line-height:1.5; */
+	padding:0;
+	margin:0;
+	background:url('../img/bg2.jpg') repeat 0 190px;
+}
+/* global  */
+.container{
+	width:90%;
+	margin:auto;
+	overflow:hidden;
+}
+
+
+ul{
+	margin:0;
+	padding:0;
+}
+
+.button_1{
+	height:30px;
+	background-color:#0D47A1;
+	padding-left:20px;
+	padding-right:20px;
+	border:none;
+	color:#FFFFFF;
+}
+
+/* HEADER SECTION */
+/* Header Design */
+header{
+	background:#212121;
+	color:#FFFFFF;
+	padding-top:0px;
+	min-height:40px;
+	border-bottom:#E65100 3px solid;
+}
+
+/* Anchor tags in header section */
+header a{
+	color:#FFFFFF;
+	text-decoration:none;
+	text-transform:uppercase;
+	font-size:16px;
+}
+
+/* li tag in header for navigation buttons */
+header li{
+	display:inline;
+	padding:0px 20px 0px 20px;
+}
+
+/* header inner div tag */
+header #branding{
+	float:none;
+}
+#branding .padding1{
+	padding-left:23%;
+	
+}
+
+#branding .padding2{
+	padding-left:21%;
+	
+}
+#branding .padding3{
+	padding-left:32%;
+	
+}
+/* header title gymkhana */
+header #branding h1{
+	margin:0;
+}
+
+.logo{
+	float:left;
+	
+	padding-right:0px;
+	padding-left:35px;
+}
+
+/* navigation tag in header */
+header nav{
+	margin-top:10px;
+	padding-bottom:10px;
+	padding-top:30px;
+}
+
+
+/* header highlighting of selected navigation  */
+header .highlight, header .current a{
+	color:#AEEA00;
+	font-weight:bold;
+} 
+
+header a:hover{
+	color:#cccccc;
+	font-weight:bold;
+}
+/* HEADER STYLE ENDS */
+
+/* SHOWCASE DESIGN STARTS */
+#showcase{
+	min-height:400px;
+	/*background:url('../img/showcase.jpg') no-repeat;*/
+	text-align:center;
+	color:#FFFFFF;
+}
+
+/* h1 of showcase */
+#showcase h1{
+	margin-top:100px;
+	font-size:55px;
+	margin-bottom:10px;
+}
+
+/* Description in paragraph tag in showcase */
+#showcase p{
+	font-size:20px;
+}
+
+.left{
+	float:left;
+}
+
+.right{
+	float:right;
+}
+.container h4{
+	float:right by 30%;
+}
+
+.fus{
+	font-size:larger;
+	font-family:"Ruffle Script DEMO";
+}
+
+@keyframes container1{
+	0%{
+		left:0;
+	}
+	20%{
+		left:0;
+	}
+	25%{
+		left:-100%;
+	}
+	45%{
+		left:-100%;
+	}
+	50%{
+		left:-200%;
+	}
+	70%{
+		left:-200%;
+	}
+	75%{
+		left:-300%;
+	}
+	95%{
+		left:-300%;
+	}
+	100%{
+		left:-400%;
+	}
+	
+}
+#pics{
+	width:80%;
+	margin-top:10px;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+	margin-bottom:10px;
+	overflow:hidden;
+	
+	
+}
+#container1{
+	overflow:hidden;
+	width:700px;
+	height:400px;
+	margin:auto;
+}
+
+#container1 figure{
+	width:500%;
+	position:relative;
+	margin:0;
+	left:0;
+	animation: 20s container1 infinite;
+}
+#container1 figure img{
+	width:20%;
+	height:400px;
+	float:left;
+}
+
+/* SCHEDULE PAGE--> */
+#schedule{
+	width:90%;
+	margin:auto;
+	overflow:hidden;
+}
+#schedule table{
+	background-color:#333333;
+	border:dotted;
+	border-color:#00FF00;
+	margin-bottom:20px;
+}
+#schedule td{
+	text-align:center;
+	padding:6px;
+	border:dotted;
+	border-width:thin;
+	border-color:#00FF00;
+	
+}
+#schedule th{
+	border:dotted;
+	border-width:thin;
+	border-color:#00FF00;
+}
+/* SHOWCASE ENDS  */
+
+/* NEWS LETTER SECTION STARTS */
+#newsletter{
+	color:#FFFFFF;
+	margin-bottom:20px;
+	padding-top:15px;
+	border-top:#E65100 2px solid;
+	border-bottom:#E65100 3px solid;
+	background:#263238;
+}
+
+#newsletter h1{
+	float:left;
+}
+
+#newsletter form{
+	float:right;
+	margin-top:20px;
+}
+
+#newsletter input[type="email"]{
+	padding:4px;
+	height:20px;
+	width:250px;
+}
+
+/* BOXES SECTION BEGINS */
+
+
+footer{
+	color:#FFFFFF;
+	background-color:#424242;
+	padding:5px;
+	line-height:0.5;
+	text-align:center;
+}
+
+/* EVENTS DESIGN  */
+/* 3 SETS DESIGN */
+#event_main a{
+	
+	
+	height:50px;
+	width:50px;
+	
+	color:#FFFFFF;
+	text-decoration:none;
+	text-transform:uppercase;
+	font-size:30px;
+	
+}
+#event_main nav{
+	padding-top:50px;
+	padding:20px;
+
+}
+#event_main li{
+	display:inline;
+	padding:50px;
+	margin:20px;
+	font-family:"Ruffle Script DEMO";
+	background:url('../img/bg1.jpg') no-repeat 0 -450px;
+}
+#event_main li:hover{
+	background-color:#cccccc;
+	font-weight:bold;
+}
+.container1{
+	width:90%;
+	margin:auto;
+	overflow:hidden;
+}
+
+.btn-group1 button {
+    background-color: #4CAF50; /* Green background */
+    border: 1px solid green; /* Green border */
+    color: white; /* White text */
+    padding:20px 24px;
+	margin-left:25%; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    width: 50%; /* Set a width if needed */
+    display: none;
+	 /* Make the buttons appear below each other */
+}
+
+.btn-group1 button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group1 button:hover {
+    background-color: #3e8e41;
+}
+
+.btn-group2 button {
+    background-color: #4CAF50; /* Green background */
+    border: 1px solid green; /* Green border */
+    color: white; /* White text */
+    padding:20px 24px;
+	margin-left:25%; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    width: 50%; /* Set a width if needed */
+    display: none;
+	 /* Make the buttons appear below each other */
+}
+
+.btn-group2 button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group2 button:hover {
+    background-color: #3e8e41;
+}
+
+.btn-group3 button {
+    background-color: #4CAF50; /* Green background */
+    border: 1px solid green; /* Green border */
+    color: white; /* White text */
+    padding:20px 24px;
+	margin-left:25%; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    width: 50%; /* Set a width if needed */
+    display: none;
+	 /* Make the buttons appear below each other */
+}
+
+.btn-group3 button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group3 button:hover {
+    background-color: #3e8e41;
+}
+
+/* SET 1 */
+article, aside, figure, footer, header, hgroup,
+menu, nav, section { display: block; }
+
+.set1container{
+	width:700px;
+	margin:30px auto 0;
+}
+
+#gallery{
+	padding-top:30px;
+	padding-bottom:20px;
+	
+	overflow:hidden;
+	
+}
+.content{
+	width:700px;
+	margin:auto;
+	overflow:hidden;
+	display:compact;
+}
+.content ul{
+	list-style:none;
+	
+}
+.names{
+	float:right;
+	list-style:none;
+	padding-right:24%;
+	margin-right:0px;
+}
+.names li{
+	font-size:40px;
+	font-weight:bold;
+	padding-top:10%;
+	padding-bottom:10%;
+	color:#FFFFFF;
+	
+}
+.names2{
+	float:right;
+	list-style:none;
+	padding-right:11%;
+	margin-right:0px;
+}
+.names2 li{
+	font-size:36px;
+	font-weight:bold;
+	padding-top:8%;
+	padding-bottom:7%;
+	color:#FFFFFF;
+	
+}
+.names3{
+	float:right;
+	list-style:none;
+	padding-right:22%;
+	margin-right:0px;
+}
+.names3 li{
+	font-size:36px;
+	font-weight:bold;
+	padding-top:10%;
+	padding-bottom:9%;
+	color:#FFFFFF;
+	
+}
+.content img{
+	
+	padding:5px;
+	border:2px solid #000000;
+}
+.back img:hover{
+	border:2px solid #FFFFFF;
+
+}
+.content img:hover{
+	border:1px solid #FFFFFF;
+
+}
+
+/*  SET 2 EVENTS STARTS */
+/* RODIES */
+.rodies{
+	
+	color:#FFCC33;
+	width:80%;
+	margin:auto;
+	margin-top:20px;
+	padding-left:25px;
+	padding-right:25px;
+	overflow:hidden;
+	background:#333333;
+	border:#00FF00 2px dotted;
+	
+}
+#data{
+	color:#FFCC00;
+}
+#data table{
+	background:#333333;
+	margin-top:40px;
+	border:#00FF00 2px dashed;
+	font-family:'sans-serif';
+	margin-bottom:20px;
+	padding-bottom:20px;
+
+}
+#data th{
+	font-size:26px;
+}
+#data td{
+	text-align:center;
+	margin:20px;
+	font-size:24px;
+}
+.rodies h1{
+	font-family:"New MOTOR";
+	color:#FF9900;
+}
+.hospitality{
+	width:70%;
+	margin:auto;
+	overflow:hidden;
+	background:#333333;
+	color:#FFCC33;
+	border:#00FF00 2px double;
+	margin-top:40px;
+	margin-bottom:20px;
+	padding-left:25px;
+	padding-right:25px;
+}
+.hospitality ul{
+	font-size:20px;
+	float:left;
+}

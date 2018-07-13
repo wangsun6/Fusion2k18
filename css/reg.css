@@ -1,0 +1,76 @@
+body{
+  background-color: #CFD8DC;
+  margin: 0;
+  padding: 0;
+}
+
+
+.button{
+  color: #FFFFFF;
+  background-color: #FF9800;
+  padding: 5px 20px 5px 20px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.section{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.container{
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+
+.section .container h1{
+  color: #009688;
+  font-size: 30px;
+  text-decoration: underline;
+}
+
+#id_table tr{
+  text-align: left;
+}
+
+#login{
+  float: right;
+  text-align: center;
+  background-color: #90A4AE;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+#id_warning{
+    margin: auto;
+}
+
+
+
+
+/*loading animation*/
+#id_loader{
+border: 16px solid #f3f3f3;
+border-radius: 50%;
+border-top: 16px solid #3498db;
+width: 80px;
+height: 80px;
+-webkit-animation: spin 2s linear infinite; /* Safari */
+animation: spin 2s linear infinite;
+
+position: absolute;
+top: 30%;
+left: 45%;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+0% { -webkit-transform: rotate(0deg); }
+100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
